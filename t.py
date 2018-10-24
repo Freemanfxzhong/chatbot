@@ -19,4 +19,4 @@ model.compile(optimizer='adam',
 model.fit(x_train, y_train, epochs=5)
 model.evaluate(x_test, y_test)
 end = time.time()
-print(end-start)
+print('execution duration' + str(end-start))
