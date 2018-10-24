@@ -1,4 +1,6 @@
 import tensorflow as tf
+import time
+start = time.time()
 mnist = tf.keras.datasets.mnist
 
 (x_train, y_train),(x_test, y_test) = mnist.load_data()
@@ -16,3 +18,5 @@ model.compile(optimizer='adam',
 
 model.fit(x_train, y_train, epochs=5)
 model.evaluate(x_test, y_test)
+end = time.time()
+print(end-start)
